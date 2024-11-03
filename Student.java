@@ -18,7 +18,7 @@ public class Student extends Person{
     }
     @Override
     public void displayInfo() {
-        System.out.println("Student Name: " + getName());
+        System.out.println("\nStudent Name: " + getName());
         System.out.println("Student ID: " + studentID);
         System.out.println("Year: " + year);
         displayDegreeInfo();
@@ -55,7 +55,7 @@ public class Student extends Person{
     public void enrollCourse(Course course){
         if (!coursesEnrolled.contains(course)) {
             coursesEnrolled.add(course);
-            System.out.println("Enrolled in course: " + course.getName()); // Assuming Course has getCourseName() method
+            System.out.println("Enrolled in course: " + course.getName());
         } else {
             System.out.println("Already enrolled in course: " + course.getName());
         }
@@ -70,7 +70,7 @@ public class Student extends Person{
     }
     public void listCoursesEnrolled(){
         System.out.println("Courses Enrolled:");
-        if (coursesEnrolled.isEmpty()) {
+        if (coursesEnrolled == null) {
             System.out.println("No courses enrolled.");
         } else {
             for (Course course : coursesEnrolled) {

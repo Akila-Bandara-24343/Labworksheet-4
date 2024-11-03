@@ -13,15 +13,23 @@ public class Department {
         this.lecturersBelongsTo = lecturersBelongsTo;
     }
     public void displayInfo() {
-        System.out.println("Department Name: " + name);
+        System.out.println("\nDepartment Name: " + name);
         displayDepartmentHeadInfo();
-        System.out.println("Courses Offered:");
-        for (Course course : coursesOffering) {
-            System.out.println("- " + course.getName()); // Assuming Course has a getCourseName() method
+        if (coursesOffering != null) {
+            System.out.println("Courses Offered:");
+            for (Course course : coursesOffering) {
+                System.out.println("- " + course.getName());
+            }
+        }else {
+            System.out.println("There are no courses offering in this moment");
         }
-        System.out.println("Lecturers in the Department:");
-        for (Lecturer lecturer : lecturersBelongsTo) {
-            System.out.println("- " + lecturer.getName()); // Assuming Lecturer has a getName() method
+        if (lecturersBelongsTo != null) {
+            System.out.println("Lecturers in the Department:");
+            for (Lecturer lecturer : lecturersBelongsTo) {
+                System.out.println("- " + lecturer.getName());
+            }
+        }else{
+            System.out.println("There are no lectures in this department");
         }
     }
 
@@ -44,7 +52,7 @@ public class Department {
         }
     }
     public void offerCourse(Course course){
-        if (!coursesOffering.contains(course)) {
+        if (!(coursesOffering.contains(course))) {
             coursesOffering.add(course);
             System.out.println("Course " + course.getName() + " added to the department's offerings.");
         } else {
@@ -62,7 +70,7 @@ public class Department {
     public void addLecturer(Lecturer lecturer){
         if (!lecturersBelongsTo.contains(lecturer)) {
             lecturersBelongsTo.add(lecturer);
-            System.out.println("Lecturer " + lecturer.getName() + " added to the department."); // Assuming Lecturer has a getName() method
+            System.out.println("Lecturer " + lecturer.getName() + " added to the department.");
         } else {
             System.out.println("Lecturer " + lecturer.getName() + " is already in the department.");
         }

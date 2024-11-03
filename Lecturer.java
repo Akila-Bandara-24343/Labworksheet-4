@@ -12,7 +12,7 @@ public class Lecturer extends Person {
 
     @Override
     public void displayInfo() {
-        System.out.println("Lecturer Name: " + getName());
+        System.out.println("\nLecturer Name: " + getName());
         System.out.println("Position: " + position);
     }
 

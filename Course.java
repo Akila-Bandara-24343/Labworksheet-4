@@ -14,16 +14,16 @@ public class Course {
     }
 
     public void displayInfo(){
-        System.out.println("Course Name: " + name);
+        System.out.println("\nCourse Name: " + name);
         System.out.println("Enrollment Type: " + enrollType);
         System.out.println("Number of Students Enrolled: " + numberOfStudentsEnrolled);
         if (lecturerInCharge != null) {
-            System.out.println("Lecturer in Charge: " + lecturerInCharge.getName()); // Assuming Lecturer has a getName() method
+            System.out.println("Lecturer in Charge: " + lecturerInCharge.getName());
         } else {
             System.out.println("No lecturer assigned.");
         }
         if (degreeBelongsTo != null) {
-            System.out.println("Degree Belongs To: " + degreeBelongsTo.getName()); // Assuming Degree has a getName() method
+            System.out.println("Degree Belongs To: " + degreeBelongsTo.getName());
         } else {
             System.out.println("No degree associated.");
         }

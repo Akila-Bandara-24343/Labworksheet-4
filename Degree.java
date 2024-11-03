@@ -42,8 +42,14 @@ public class Degree {
         }
     }
     public void displayInfo() {
-        System.out.println("Degree Name: " + name);
+        System.out.println("\nDegree Name: " + name);
         System.out.println("Number of Students: " + numberOfStudents);
         System.out.println("Courses Offering:");
+        if(coursesOffering == null){
+            System.out.println("No courses are offering");
+        }else{
+            listCoursesOffering();
+        }
+
     }
 }
